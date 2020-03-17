@@ -58,7 +58,7 @@ In order to run these tests, you will need to install Java JDK 11 and Maven. Ava
 
 ## Instructions
 
-After having the **Java** and **Maven** installed, the tests should run successfully. Open a terminal in the folder where contains the `pom.xml` file, in this case, `JSONPlaceholder_API` folder.
+After having the **Java** and **Maven** installed, the tests should run successfully. Open a terminal in the folder where contains the `pom.xml` file, in this case, `jsonplaceholder_api_test-master` folder.
 
 1. ###### Run Automated Tests
     To run the test use the following command:

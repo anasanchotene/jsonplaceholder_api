@@ -1,6 +1,6 @@
 # JSONPlaceholder API Test
 
-This project is an automated test suite for the the JSONPlaceholder API programmed in *Java* and using **Maven** as project software management. **Frameworkium** is used to manage dependencies and
+This project is an automated test suite for the the JSONPlaceholder API programmed in *Java* and using **Maven** as project software management. **Frameworkium** is used to manage dependencies and define structure.
 ## Index
 
 1. #### [Used Tools](#used-tools-1)
@@ -16,7 +16,7 @@ JSONPlaceholder is public fake API provides different operations on a list of re
 
 The API and its documentation is available on https://jsonplaceholder.typicode.com/.
 
-#### Frameworkium (Maven, Allure and TestNG)
+#### Frameworkium
 
 Frameworkium is an Java framework that provides the code structure guidelines and contains Java libraries to help with writing tests of several types. It can be used for UI, mobile app, API and other forms of testing.
 
@@ -50,13 +50,13 @@ Here is where the calls to the API service are implemented.
 
 The test definitions are found here. The methods in this class will connect to the Service class and using the DTOs will verify if the returns from the API are correct. The assertions are made only in this class. Since only little data was needed, it was create within the class but a CSV file or database connection could have been used.
 
-## Configuration
+## Set Up
 
 In order to run these tests, you will need to install Java JDK 11 and Maven. Available on the following links:
 * [Java JDK 11](https://www.oracle.com/java/technologies/javase-downloads.html#JDK11)
 * [Maven](https://maven.apache.org/)
 
-## How To Run
+## Instructions
 
 After having the **Java** and **Maven** installed, the tests should run successfully. Open a terminal in the folder where contains the `pom.xml` file, in this case, `JSONPlaceholder_API` folder.
 
@@ -74,7 +74,7 @@ After having the **Java** and **Maven** installed, the tests should run successf
     mvn clean verify -Dtest=ResourceTest#listAllResources
     ```
 
-1. ###### Generate Allure Test Report
+1. ###### Generate Test Report
     After running the automated tests, you can generate a `HTML` test report running the following command:
     ```unix
     mvn allure:report

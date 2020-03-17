@@ -5,13 +5,13 @@ import com.frameworkium.core.api.Endpoint;
 public enum JSONEndpoint implements Endpoint {
 
     BASE_URI("https://jsonplaceholder.typicode.com"),
-    POSTS("/posts/%d"),
+    POST("/posts/%d"),
     LIST("/posts/"),
     FILTERING("/posts?userId=%d"),
     COMMENTS("/posts/%d/comments"),
     TODOS("/users/%d/todos"),
     ALBUMS("/users/%d/albums"),
-    USER_POSTS("/users/%d/posts"),
+    POSTS("/users/%d/posts"),
     PHOTOS("/albums/%d/photos"),
     WRONG_URL("/post");
 

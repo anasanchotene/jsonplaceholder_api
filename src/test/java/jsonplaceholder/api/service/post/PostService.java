@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PostService extends AbstractResourceService {
     public List<Post> getUserPost (int userId) {
-        return get(JSONEndpoint.USER_POSTS.getUrl(userId)).jsonPath().getList(".", Post.class);
+        return get(JSONEndpoint.POSTS.getUrl(userId)).jsonPath().getList(".", Post.class);
     }
 
     public boolean assertUserId (int userId, List<Post> posts) {

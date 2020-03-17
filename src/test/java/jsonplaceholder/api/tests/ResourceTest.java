@@ -90,6 +90,20 @@ public class ResourceTest extends BaseAPITest {
         assertThat(service.getWrongUrlResource().then().statusCode(HttpStatus.SC_NOT_FOUND));
     }
 
+    @Description("Try to access invalid post")
+    @Test (enabled =  false)
+    public void getInvalidPostId() {
+        ResourceService service = new ResourceService();
+        assertThat(service.getInvalidPostId().then().statusCode(HttpStatus.SC_NOT_FOUND));
+    }
+
+    @Description("Try to access invalid user id")
+    @Test (enabled =  true)
+    public void getInvalidUserId() {
+        ResourceService service = new ResourceService();
+        assertThat(service.getInvalidUserId().then().statusCode(HttpStatus.SC_NOT_FOUND));
+    }
+
     @Description("Update resource using patch")
     @Test (enabled =  true)
     public void updateResourceTitle_Patch () {

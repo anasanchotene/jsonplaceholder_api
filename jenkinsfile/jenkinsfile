@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    tools {
+        maven 'Maven 3.6.1'
+        jdk 'jdk11'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean verify'
+                sh 'mvn allure:report'
+            }
+        }
+        post {
+            always {
+                junit 'target/site/allure-maven-plugin/index.html'
+            }
+        }
+
+    }
+}
